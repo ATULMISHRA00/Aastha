@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Best Friend Day Aastha ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+min-height:100vh;
+overflow-x:hidden;
+color:white;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:15px;
+text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.subtitle{
+font-size:1.1rem;
+max-width:600px;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4f8b;
+font-weight:700;
+font-size:1rem;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.glass{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:30px;
+box-shadow:0 8px 32px rgba(0,0,0,.2);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.photo{
+background:white;
+padding:10px;
+border-radius:15px;
+color:black;
+}
+
+.photo img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.message{
+font-size:1.1rem;
+line-height:1.9;
+text-align:left;
+}
+
+.final{
+font-size:2rem;
+font-weight:700;
+padding:40px;
+display:none;
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+position:fixed;
+bottom:-10px;
+font-size:20px;
+animation:float 8s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>Happy Best Friend Day 💖</h1>
+<h2>Aastha 🌸</h2>
+<p class="subtitle">
+Someone very lucky is grateful to have you in their life.
+</p>
+
+<button class="btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+Open Surprise ✨
+</button>
+</section>
+
+<section class="section" id="gallery">
+<div class="glass">
+<h2>Our Memories 📸</h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="photo1.jpeg">
+<p>Our First Memory 🌸</p>
+</div>
+
+<div class="photo">
+<img src="photo 2.jpeg">
+<p>The Funniest Moment 😂</p>
+</div>
+
+<div class="photo">
+<img src="photo3.jpeg">
+<p>Favorite </p>
+</div>
+
+<div class="photo">
+<img src="photo4.jpeg">
+<p>      </p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="glass">
+
+<h2>A Message For You 💌</h2>
+
+<div class="message">
+
+<br>
+
+Dear Aastha,
+
+<br><br>
+
+Some people become friends,
+and some become a beautiful part of our story.
+
+You are one of those rare people whose presence can make ordinary days feel special.
+
+Thank you for all the random conversations,
+all the laughs,
+all the support,
+and all the memories we've shared together.
+
+No matter how busy life gets,
+I genuinely hope our friendship continues to stay just as real and meaningful as it is today.
+
+You are appreciated more than you probably realize.
+
+Keep smiling,
+keep shining,
+and never stop being the amazing person you are.
+
+<br><br>
+
+Happy Best Friend Day ❤️
+
+<br><br>
+
+— Atul 🌻
+
+</div>
+
+<button class="btn" onclick="showFinal()">
+Final Surprise 💝
+</button>
+
+<div id="final" class="final">
+Thank You For Being My Favorite Human 🌻❤️
+</div>
+
+</div>
+</section>
+
+<script>
+
+function showFinal(){
+document.getElementById("final").style.display="block";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+}
+
+setInterval(createHeart,500);
+
+</script>
+
+</body>
+</html>
